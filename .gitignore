@@ -1,0 +1,4 @@
+*~
+*.o
+pool
+Makefile

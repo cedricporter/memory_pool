@@ -1,0 +1,23 @@
+# Makefile for pool
+# Author:   Hua Liang [Stupid ET]
+# Website:  http://EverET.org
+# Email:    et@everet.org
+
+all: pool
+	@echo '-------------------------'
+	./pool
+
+CFLAGS = -g -O3
+OBJS = pool.o obmalloc.o timer.o 
+
+clean:
+	-rm -f *.o pool
+
+.PHONY: clean
+
+pool: $(OBJS)
+	gcc $(CFLAGS) $^ -o $@
+
+%o: %c
+	gcc -c $(CFLAGS) $*c -o $*o
+
