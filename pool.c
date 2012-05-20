@@ -24,7 +24,10 @@ typedef struct node
 /* ==================================================
  * my_malloc is memory allocation function pointer
  * my_free is memeroy free function pointer
- * size is the size of each memory allocation
+ * size is the size of each memory allocation, but now
+ *     we use size from SIZE_LIST to allocate different
+ *     size of memory each time. Thus, this param is a
+ *     just useless placeholder.
  * loop is the number of iteration
  */ 
 /** free memory after malloc immediately. */
